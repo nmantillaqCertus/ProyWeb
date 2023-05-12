@@ -6,6 +6,7 @@ $(document).ready(function () {
 
         if (usuarioEnviado.length > 0) {
 
+            //Validar el usuario
             usuarioLogueado.push({
                 usuario: objetoInicioSesion.usuario,
                 Nombres: objetoInicioSesion.nombres,
@@ -15,7 +16,12 @@ $(document).ready(function () {
             $("#ID_UserLogin").text(usuarioLogueado[0].Nombres);
             $("#ID_NroCursos").text(usuarioLogueado[0].NroCursos);
 
-            
+            //Fin Validar el usuario
+
+            //Operaciones
+            inicializarTabla();
+
+
 
         } else {
             window.location = "../Login/login.html";
@@ -25,3 +31,13 @@ $(document).ready(function () {
         window.location = "../Login/login.html";
     }
 });
+
+let tablaDatos;
+
+function inicializarTabla(){
+
+    tablaDatos = new DataTable('#ID_TABLE_DATA');
+
+}
+
+

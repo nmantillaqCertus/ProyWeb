@@ -2,8 +2,10 @@
 
 $("#ID_IniciarSesion").on("click", function () {
 
+    debugger
+
     let nombreUsuario = $("#ID_Nombre_Usuario").val().trim();
-    let contraseniaUsuario = $("#ID_Contrasenia").val().trim();
+    let contraseniaUsuario = $("#ID_Contrasenia").val();
 
     //llamar a un serivio para la validación de credenciales
     if(nombreUsuario == objetoInicioSesion.usuario && contraseniaUsuario == objetoInicioSesion.password){
