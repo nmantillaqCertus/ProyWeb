@@ -2,39 +2,27 @@ $(document).ready(function () {
 
 
     if (window.location.search.includes("U=")) {
-        let usuarioEnviado = window.location.search.split('=')[1];
+        let usuarioEnviado = window.location.search.split('=')[1].trim();
 
-        if (usuarioEnviado.length > 0) {
-
-            //Validar el usuario
-            usuarioLogueado.push({
-                usuario: objetoInicioSesion.usuario,
-                Nombres: objetoInicioSesion.nombres,
-                NroCursos: objetoInicioSesion.NroCursos
-            });
-
+        if (validateUser(usuarioEnviado)) {
             $("#ID_UserLogin").text(usuarioLogueado[0].Nombres);
             $("#ID_NroCursos").text(usuarioLogueado[0].NroCursos);
-
-            //Fin Validar el usuario
-
-            //Operaciones
             inicializarTabla();
-
-
-
         } else {
-            window.location = "../Login/login.html";
+            let respuestaUsuario = confirm("Operación incorrecta, por favor vuelva a inciar sesión");
+            if (respuestaUsuario || !respuestaUsuario) {
+                window.location = "../Login/login.html";
+            }
         }
-
     } else {
         window.location = "../Login/login.html";
     }
+    
 });
 
 let tablaDatos;
 
-function inicializarTabla(){
+function inicializarTabla() {
 
     tablaDatos = new DataTable('#ID_TABLE_DATA');
 
