@@ -10,7 +10,12 @@ $(document).ready(function () {
 
 });
 
+//Variables Generales
 var tablaCursos;
+var uriDetalle = "https://pokeapi.co/api/v2/pokemon/";
+
+
+//Fin Variables Generales
 
 function getData() {
     let auxResponse = [];
@@ -37,15 +42,45 @@ function prosesarData(responseData) {
     if (responseData[0].status) {
         for (let i = 0; i < responseData[0].data.length; i++) {
 
-            console.log("Nombre => "+responseData[0].data[i].name);
+            let idItem = responseData[0].data[i].url;
+            idItem = idItem.split("/")[6];
 
             tablaCursos.row.add([
                 "<span>" + responseData[0].data[i].name + "</span>",
-                "<span>Alguna Acción</span>"
+                "<span style='cursor:pointer' onClick='verDetalle("+idItem+");'> <i class='fa fa-eye' aria-hidden='true'></i> </span>"
             ]).draw();
         }
     }
 }
+
+function verDetalle(valor){
+    let itemDetalle = getServiceDetalle(valor);
+    $("#ID_Modal_CursoLabel").text(itemDetalle.name);
+    $("#ID_Modal_Curso").modal();
+}
+
+function getServiceDetalle(valor) {
+    let aux = [];
+    try {
+
+        $.ajax({
+            async: false,
+            type: 'get',
+            url: uriDetalle + valor,
+            success: function (r) {
+                console.log(r);
+                aux = r;
+            }
+        });
+
+    } catch (error) {
+        aux = [];
+        console.log("Se produjo un error");
+    }
+    return aux;
+}
+
+
 
 function getService() {
     let aux = [];
