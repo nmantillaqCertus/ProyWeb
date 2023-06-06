@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+
+    <link rel="stylesheet" href="/JS/Lib/Bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="/JS/Lib/Datatable/jquery.dataTables.min.css">
+
+    <title>Sistema de Capacitaciones</title>
+</head>
+
+<body class="container text-center">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/MODULOS/Capacitaciones/bandeja_Capacitaciones.html">Inicio<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/MODULOS/Administracion/registro_curso.html">Registro Cursos</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h3>Bienvenido, <span id="ID_UserLogin"></span></h3>
+        <div>
+            <p> Usted tiene <span id="ID_NroCursos"></span> cursos.</p>
+        </div>
+        <hr>
+
+        <!--Acá ira mi tabla-->
+        <h4>Cursos Disponibles</h4>
+        <div>
+            <table id="ID_TABLE_CURSOS">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+
+
+
+    <script src="/JS/Lib/Bootstrap/jquery-3.6.4.js"></script>
+    <script src="/JS/Lib/Bootstrap/popper.min.js"></script>
+    <script src="/JS/Lib/Bootstrap/bootstrap.min.js"></script>
+    <script src="/JS/Lib/Datatable/jquery.dataTables.min.js"></script>
+    <script src="/JS/app.js"></script>
+    <script src="/JS/Mod_Cursos/bandeja_curso.js"></script>
+
+</body>
+
+</html>

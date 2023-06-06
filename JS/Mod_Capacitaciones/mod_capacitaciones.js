@@ -23,8 +23,23 @@ $(document).ready(function () {
 let tablaDatos;
 
 function inicializarTabla() {
-
-    tablaDatos = new DataTable('#ID_TABLE_DATA');
+    debugger
+    
+    tablaDatos =     $('#ID_TABLE_DATA').DataTable({
+        language: {
+            url: '//cdn.datatables.net/plug-ins/1.13.4/i18n/es-ES.json',
+        }
+    });
+    
+    console.log(ListaCursos);
+    for(let i = 0; i < ListaCursos.length; i++){
+        tablaDatos.row.add([
+            "<span>"+ListaCursos[i].curso+"</span>",
+            "<span>"+ListaCursos[i].creditos+"</span>",
+            "<span>"+ListaCursos[i].turno+"</span>",
+            "<span>"+ListaCursos[i].docente+"</span>"
+        ]).draw();
+    }
 
 }
 

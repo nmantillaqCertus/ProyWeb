@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/JS/Lib/Bootstrap/bootstrap.min.css">
+
+    <title>Sistema de Capacitaciones</title>
+</head>
+
+<body class="container">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="/MODULOS/Capacitaciones/bandeja_Capacitaciones.html">Inicio<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Registro Cursos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Disabled</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+    <div class="p-3">
+        <div class="form-group">
+            <label for="ID_Curso">Nombre del Curso</label>
+            <input type="text" class="form-control" id="ID_Curso">
+            <small id="ID_Curso_E" style="color:red; display: none;">*Completar</small>
+        </div>
+        <div class="form-group">
+            <label for="ID_Creditos">Numero de creditos</label>
+            <input type="number" class="form-control" id="ID_Creditos">
+            <small id="ID_Creditos_E" style="color:red; display: none;">*Completar</small>
+        </div>
+        <div class="form-group">
+            <label for="ID_Turno">Turno del curso</label>
+            <input type="text" class="form-control" id="ID_Turno">
+            <small id="ID_Turno_E" style="color:red; display: none;">*Completar</small>
+        </div>
+        <div class="form-group">
+            <label for="ID_Docente">Nombre del Docente</label>
+            <input type="text" class="form-control" id="ID_Docente">
+            <small id="ID_Docente_E" style="color:red; display: none;">*Completar</small>
+        </div>
+
+        <a class="btn btn-primary" id="ID_GuardarCurso">Guardar</a>
+
+        <a class="btn btn-primary" href="/MODULOS/Administracion/gestion_curso.html">Gestion</a>
+
+        <br>
+    </div>
+
+
+    <script src="/JS/Lib/Bootstrap/jquery-3.6.4.js"></script>
+    <script src="/JS/Lib/Bootstrap/popper.min.js"></script>
+    <script src="/JS/Lib/Bootstrap/bootstrap.min.js"></script>
+    <script src="/JS/app.js"></script>
+    <script src="/JS/Mod_Cursos/mod_registro.js"></script>
+
+</body>
+
+</html>

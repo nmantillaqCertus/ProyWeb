@@ -19,6 +19,81 @@ var ListaUsuarios = [
     }
 ];
 
+var ListaCursos = [
+    {
+        curso: "mátematicas",
+        creditos: "13",
+        turno: "Mañana",
+        docente: "Roberto Salazar"
+    },
+    {
+        curso: "ciencias",
+        creditos: "19",
+        turno: "Mañana",
+        docente: "Alvaro Carreño"
+    },
+    {
+        curso: "comunicacion",
+        creditos: "17",
+        turno: "Mañana",
+        docente: "Roberto Salazar"
+    },
+    {
+        curso: "Arte y Cultura",
+        creditos: "19",
+        turno: "Mañana",
+        docente: "Alvaro Carreño"
+    },
+    {
+        curso: "tecnologias",
+        creditos: "15",
+        turno: "Tarde",
+        docente: "Ignacio Flores"
+    },
+    {
+        curso: "Educacion Fisica",
+        creditos: "13",
+        turno: "Mañana",
+        docente: "Roberto Salazar"
+    },
+    {
+        curso: "Robotica",
+        creditos: "19",
+        turno: "Mañana",
+        docente: "Alvaro Carreño"
+    },
+    {
+        curso: "Electronica",
+        creditos: "17",
+        turno: "Mañana",
+        docente: "Roberto Salazar"
+    },
+    {
+        curso: "Cosmetologia",
+        creditos: "19",
+        turno: "Mañana",
+        docente: "Alvaro Carreño"
+    },
+    {
+        curso: "Tutoria",
+        creditos: "15",
+        turno: "Tarde",
+        docente: "Ignacio Flores"
+    },
+    {
+        curso: "Enfermeria",
+        creditos: "19",
+        turno: "Mañana",
+        docente: "Alvaro Carreño"
+    },
+    {
+        curso: "Musica",
+        creditos: "15",
+        turno: "Tarde",
+        docente: "Ignacio Flores"
+    }
+];
+
 var usuarioLogueado = [];
 
 function autenticateUser(valUser, valPass){    
